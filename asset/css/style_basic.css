@@ -1,0 +1,114 @@
+@font-face {
+    font-family: 'determination';
+    src: url(DeterminationSansWebRegular-369X.ttf);
+}
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main>div{
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+main>div div *{
+    margin-left: 2px;
+}
+
+main>div div{
+    border:  1px solid #0f0;
+    height: 45.5vh;
+}
+
+h2{
+    margin: 0px;
+}
+
+body{
+    font-family:'determination';
+    flex-direction: column;
+    background-color: #000;
+    color: #fff;
+    font-size: 2.5vh;
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    align-items: center;
+    bottom:0px ;
+    gap: 3vh;
+}
+
+nav{
+    width: 100vw;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: repeat(6, 1fr);
+}
+
+#button_f{
+    grid-column: 2;
+}
+
+#button_a{
+    grid-column: 3;
+}
+
+#button_i{
+    grid-column: 4;
+}
+
+#button_m{
+    grid-column: 5;
+}
+
+#contact{
+    grid-column: 6;
+    font-size: 1.5vh;
+}
+
+footer>div{
+    width: 80vw;
+    height: 25vh;
+    border: 5px solid #fff;
+    display: grid;
+
+    align-items: center;
+    grid-template-columns: 1vw 39vw 39vw;
+    grid-template-rows: repeat(4, 6.25fr);
+}
+
+#grid_first{
+    grid-column: 2;
+}
+
+#grid_second{
+    grid-column: 3;
+}
+
+#grid_third{
+    grid-column: 2;
+    grid-row: 2;
+}
+
+footer>div div{
+    display: flex;
+    align-items: center;
+    gap: 0.5vw;
+}
+
+footer>div div img{
+    width: 16px;
+    height: 16px;
+}

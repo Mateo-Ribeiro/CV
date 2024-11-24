@@ -1,0 +1,9 @@
+ .folio_pic{
+    height: 33vw;
+    width: 33vw;
+}
+
+main>div div{
+    display: flex;
+    flex-direction: column;
+}
