@@ -1,25 +1,38 @@
+/* section universel */
+
+/* importe une police personalisée */
 @font-face {
     font-family: 'determination';
     src: url(DeterminationSansWebRegular-369X.ttf);
 }
-
+/* met la police personalisé sur tous les textes et les rends blanc
+rend le fond noir */
 body{
     font-family:'determination';
-    flex-direction: column;
     background-color: #000;
     color: #fff;
 }
-
+/* rend tous les liens rouge clair, sans soulignement */
 a{
     text-decoration: none;
-    color: #fff;
+    color: #ff8989;
 }
-
-footer nav img{
-    display: none;
+/* met un contour sur le contenu du CV */
+main>div div{
+    border:  1px solid #0f0;
 }
-
-footer>div{
+/* met une marge pour decoller le texte du contour */
+main>div div *{
+    margin-left: 2px;
+}
+/* permet de centrer le titre et le contenu du CV */
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* creer le cadre de la nav et place une grid dessus */
+footer>nav{
     width: 80vw;
     height: 25vh;
     border: 5px solid #fff;
@@ -28,7 +41,8 @@ footer>div{
     grid-template-columns: 1vw 39vw 39vw;
     grid-template-rows: repeat(4, 6.25fr);
 }
-
+/* 3 blocs suivants
+place les liens de la nav dans la grid */
 #grid_first{
     grid-column: 2;
 }
@@ -41,11 +55,23 @@ footer>div{
     grid-column: 2;
     grid-row: 2;
 }
-
-main>div div{
-    border:  1px solid #0f0;
+/* garde l'indicateur de page */
+footer>nav div img{
+    display: block;
 }
+/* permet mettre en ligne l'indicateur de page avec le texte */
+footer>nav div{
+    display: flex;
+    align-items: center;
+    gap: 0.5vw;
+}
+/* section pour mobile */
 
+/* enlève les images en bas présentes sur la version desktop */
+footer div img{
+    display: none;
+}
+/* permet de mettre le footer en bas de la page */
 footer{
     display: flex;
     flex-direction: column;
@@ -53,46 +79,37 @@ footer{
     align-items: center;
     bottom:0px ;
 }
-
+/* section pour desktop */
 @media screen and (min-width:375px) {
-
+    /* aggrandi le texte */
     body{
         font-size: 2.5vh;
     }
-    main{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
+    /* creer une grid de 3 colonnes qui prend la taille de l"ecran */
     main>div{
         width: 100vw;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
     }
-
-    main>div div *{
-        margin-left: 2px;
-    }
-
+    /* aggrandis la div pour  */
     main>div div{
         height: 45.5vh;
     }
-
+    /* enkeve les marges des titres h2 */
     h2{
         margin: 0px;
     }
-
+    /* place un ecart entre la nav et la décoration en bas */
     footer{
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        align-items: center;
-        bottom:0px ;
         gap: 3vh;
     }
-
-    nav{
+    /* affiche les images pour desktop */
+    footer div img{
+        display: block;
+    }
+    /* 5 blocs suivants 
+    met en forme de la decoration avec une grid */
+    footer div:last-child{
         width: 100vw;
         display: grid;
         justify-items: center;
@@ -115,47 +132,13 @@ footer{
     #button_m{
         grid-column: 5;
     }
-
+    /* ajuste la police et place les contacts dans la grid */
     #contact{
         grid-column: 6;
         font-size: 1.5vh;
     }
-
-    footer>div{
-        width: 80vw;
-        height: 25vh;
-        border: 5px solid #fff;
-        display: grid;
-
-        align-items: center;
-        grid-template-columns: 1vw 39vw 39vw;
-        grid-template-rows: repeat(4, 6.25fr);
-    }
-
-    footer nav img{
-        display: block;
-    }
-
-    #grid_first{
-        grid-column: 2;
-    }
-
-    #grid_second{
-        grid-column: 3;
-    }
-
-    #grid_third{
-        grid-column: 2;
-        grid-row: 2;
-    }
-
-    footer>div div{
-        display: flex;
-        align-items: center;
-        gap: 0.5vw;
-    }
-
-    footer>div div img{
+    /* ajuste la taille de l'indicateur */
+    footer>nav div img{
         width: 16px;
         height: 16px;
     }

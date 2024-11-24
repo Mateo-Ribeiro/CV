@@ -1,20 +1,21 @@
+/* section pour mobile */
+/* permet de donner un diplay flex par couple image/lien */
 main>div div{
     display: flex;
 }
-
+/* permet d'agrandir les images */
 .folio_pic{
     height: 20vw;
     width: auto;
 }
+/* section pour desktop */
 @media screen and (min-width:375px) {
-    
+    /* permet d'agrandir les images */
     .folio_pic{
         height: 33vw;
-        width: auto;
     }
-
+    /* change la direction des flexs de chaque couple image/lien */
     main>div div{
-        display: flex;
         flex-direction: column;
     }
 }

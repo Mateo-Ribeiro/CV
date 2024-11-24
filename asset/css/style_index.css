@@ -1,14 +1,17 @@
+/* section pour mobile */
+/* permet de centrer l'image */
 main div :nth-child(2){
     display: flex;
     justify-content: center;
 }
-
+/* aggrandis l'image de profile (actuellement un placeholder) */
 main div div img{
     width: 33vw;
     height: auto;
 }
-
+/* section pour desktop */
 @media screen and (min-width:375) {
+    /* aggrandis l'image de profile (actuellement un placeholder) */
     main div div img{
         width: 33vw;
         height: auto;
