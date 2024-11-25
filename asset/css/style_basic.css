@@ -109,7 +109,7 @@ footer{
     }
     /* 5 blocs suivants 
     met en forme de la decoration avec une grid */
-    footer div:last-child{
+    footer>div:last-child{
         width: 100vw;
         display: grid;
         justify-items: center;
