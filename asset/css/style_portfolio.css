@@ -10,10 +10,6 @@ main>div div{
 }
 /* section pour desktop */
 @media screen and (min-width:375px) {
-    /* permet d'agrandir les images */
-    .folio_pic{
-        height: 33vw;
-    }
     /* change la direction des flexs de chaque couple image/lien */
     main>div div{
         flex-direction: column;
